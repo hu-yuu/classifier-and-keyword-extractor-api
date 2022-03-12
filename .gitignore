@@ -1,0 +1,7 @@
+/venv/
+/pickles/
+/__pycache__/
+/zemberek_data/
+/zemberek*
+/stopwords*
+
