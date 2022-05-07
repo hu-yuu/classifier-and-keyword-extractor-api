@@ -1,4 +1,3 @@
-from sklearn.feature_extraction.text import TfidfVectorizer
 import pickle
 import pandas as pd
 
@@ -40,6 +39,6 @@ class TfIdfExtractor():
             returnval = self.__keyphrases(keywordNum, 1, vectDF)
             return returnval
         except:
-            print("hata")
+            print("error extracting keywords")
 
 
