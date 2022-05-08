@@ -12,6 +12,7 @@ txtClassify = classifier.Classifier()
 
 
 
+
 class KeywordsRoute(Resource):
     def get(self):
         text = request.args.get('text')
@@ -34,6 +35,7 @@ class LabelRoute(Resource):
 
         outboundVars = classify(text)       
         return outboundVars[0], outboundVars[1]
+
 
 api.add_resource(KeywordsRoute, '/keywords')
 api.add_resource(LabelRoute, '/label')
@@ -100,4 +102,4 @@ def extract(text):
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=9998)
+    app.run(debug=True, port=9998, host='0.0.0.0')

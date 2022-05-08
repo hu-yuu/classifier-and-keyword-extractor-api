@@ -13,7 +13,7 @@ import zemberek_grpc.morphology_pb2_grpc as z_morphology_g
 #java -jar zemberek-full.jar StartGrpcServer --dataRoot .\zemberek_data\
 #java -jar zemberek-full.jar StartGrpcServer --dataRoot ./zemberek_data/
 
-channel = grpc.insecure_channel('localhost:6789')
+channel = grpc.insecure_channel('zemberek:6789')
 langid_stub = z_langid_g.LanguageIdServiceStub(channel)
 normalization_stub = z_normalization_g.NormalizationServiceStub(channel)
 preprocess_stub = z_preprocess_g.PreprocessingServiceStub(channel)

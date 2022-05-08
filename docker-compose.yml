@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  zemberek:
+    build:
+      context: .
+      dockerfile: zemberek.Dockerfile
+    ports:
+      - 6789:6789
+
+  api:
+    build:
+      context: .
+      dockerfile: api.Dockerfile
+    ports:
+      - 9998:9998
+    depends_on:
+      - zemberek

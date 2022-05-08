@@ -5,7 +5,7 @@ click==8.0.4
 Flask==2.0.3
 Flask-RESTful==0.3.9
 googleapis-common-protos==1.55.0
-grpcio==1.32.0
+grpcio
 grpcio-tools==1.44.0
 idna==3.3
 itsdangerous==2.1.1
